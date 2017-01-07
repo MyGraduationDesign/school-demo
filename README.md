@@ -5,4 +5,4 @@
 - PHP留言系统
 ![留言系统](/design/message.jpg)
 - Java宿舍管理系统
-![宿舍管理系统](/design/sushe.jpg)
+![宿舍管理系统](/design/宿舍.jpg)
