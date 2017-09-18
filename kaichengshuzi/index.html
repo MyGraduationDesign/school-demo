@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			结课项目
+		</title>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" href="style.css">
+		<script src="jquery-1.11.2.min.js"></script>
+		<script>
+		//当页面加载完毕之后，执行function里面的代码。
+		$(function(){
+			var n = 1;	//当前所在的图片张数
+			var liList = $(".banner li");	//所有li
+			// 获取.next元素，并为其绑定单击事件；
+			// 当用户点击.next元素的时候，执行function里的代码
+			$(".next").click(function(){
+				//当不在最后一张时
+				if(n < $(".banner li").length){
+					liList.hide();
+					liList.eq(n).fadeIn("slow");
+					n++;
+				}
+				// 当在最后一张时
+				else{
+					liList.hide();
+					liList.eq(0).fadeIn("slow");
+					n=1;
+				}
+			})	
+			$('.prev').click(function(){
+	         	n--;
+	        	 if(n<1){
+	           		n=count;
+	        	}
+	        	else{
+			        liList.animate({
+			            "marginLeft":-1366*(n%count)
+			        });
+			    }
+   		});	
+	})
+	</script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="content">
+				<div class="top-left">
+					<img style='padding-left:1px;' src="images/微博.jpg" alt="">
+					<img src="images/优酷.jpg" alt="">
+					<img src="images/微信.jpg" alt="">
+					<img style='padding-left:12px;' src="images/英国.jpg" alt="">
+					<ul>
+						<li style='padding-left:8px;'>English</li>
+						<img src="images/倒三角.jpg" alt="">
+						<img class='img-1' src="images/1.jpg" alt="">
+						<li style='padding:0 4px;'>APP下载</li><img src="images/倒三角.jpg" alt=""><img class='img-1' src="images/1.jpg" alt="">
+						<img class='img-1' src="images/电话.jpg" alt="">
+						<li>400-012-3456</li>
+					</ul>
+					<ul class='right'>
+						<li style='padding-left:100px;padding-right:7px;'>首页</li><img class='img-1' src="images/1.jpg" alt="">
+						<li>新闻中心</li><img class='img-1' src="images/1.jpg" alt="">
+						<li>服务中心</li><img class='img-1' src="images/1.jpg" alt="">
+						<li>产品中心</li><img class='img-1' src="images/1.jpg" alt="">
+						<li>成功案例</li><img class='img-1' src="images/1.jpg" alt="">
+						<li>关于我们</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="header">
+			<div class="content">
+				<div class="header-left">
+					<img src="images/logo.png" alt="">
+				</div>
+				<div class="header-right">
+					<ul>
+			            <li style='margin-left:70px;'><p class="p1">数字体验馆</p><p class="p2">Digital Gallery</p></li>
+			            <li><p class="p1">网上3D展示</p><p class="p2">3D Showroom</p></li>
+			            <li><p class="p1">企业移动APP</p><p class="p2">Company APP</p></li>
+			            <li><p class="p1">3D动画</p><p class="p2">3D animation</p></li>
+			            <li><p class="p1">3D仿真</p><p class="p2">3D Simulation</p></li>
+			            <li><p class="p1">互动多媒体</p><p class="p2">Multimedia</p></li>
+			            <li><p class="p1">视觉设计</p><p class="p2">Visual Design</p></li>
+			        </ul>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		<div class="banner">
+			<ul>
+			<li style="display:block;"><img src="images/banner1.jpg" alt=""></li>
+			<li><img src="images/banner2.jpg" alt=""></li>
+			<li><img src="images/banner3.jpg" alt=""></li>
+			<li><img src="images/banner4.jpg" alt=""></li>
+			<li><img src="images/banner5.jpg" alt=""></li>
+			</ul>
+			<img src="images/prev.png" class="prev" alt="">
+			<img src="images/next.png" class="next" alt="">
+		</div>
+
+		<div class="welcome">
+			<h3>能源及装备制造领域为主导服务的数字多媒体综合供应商</h3>
+			<p>全国众多知名煤机企业的唯一指定合作公司</p>
+
+		</div>
+
+		<div class="and">
+			<div class="content">
+				<img src="images/and_prev.jpg" alt="">
+				<img src="images/中煤.jpg" alt="">
+				<img src="images/中煤装备.jpg" alt="">
+				<img src="images/张恒.jpg" alt="">
+				<img src="images/平顶山.jpg" alt="">
+				<img src="images/郑煤机.jpg" alt="">
+				<img src="images/太重煤机.jpg." alt="">
+				<img src="images/太重.jpg" alt="">
+				<img style='padding-left:5px;' src="images/and_next.png" alt="">
+			</div>
+		</div>
+
+		<div class="content-img1">
+			<div class="content">
+				<div class="content-img1-line">
+					<h4>热点产品</h4>
+					<div style='width:37px;height:1px;background-color:#8d8a86;margin-top:10px;margin-left:3px;'></div>
+				</div>
+				<div class="content-img1-box">
+					<div class="box-img">
+						<img src="images/p1.jpg" alt="">
+						<h4>荣威/ROEWE</h4>
+						<h5>VI设计</h5>
+						<h6>上汽股份旗下</h6>
+					</div>
+					<div class="box-img">
+						<img src="images/p2.jpg" alt="">
+						<h4>荣威/ROEWE</h4>
+						<h5>VI设计</h5>
+						<h6>上汽股份旗下</h6>
+					</div>
+					<div class="box-img">
+						<img src="images/p3.jpg" alt="">
+						<h4>荣威/ROEWE</h4>
+						<h5>VI设计</h5>
+						<h6>上汽股份旗下</h6>
+					</div>
+					<div class="box-img">
+						<img src="images/p4.jpg" alt="">
+						<h4>荣威/ROEWE</h4>
+						<h5>VI设计</h5>
+						<h6>上汽股份旗下</h6>
+					</div>
+					<div class="box-img">
+						<img src="images/p5.jpg" alt="">
+						<h4>荣威/ROEWE</h4>
+						<h5>VI设计</h5>
+						<h6>上汽股份旗下</h6>
+					</div>
+					<div class="box-img">
+						<img src="images/p6.png" alt="">
+						<h4>荣威/ROEWE</h4>
+						<h5>VI设计</h5>
+						<h6>上汽股份旗下</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="success">
+			<div class="content">
+				<div class="content-img1-line">
+					<h4>成功案例</h4>
+					<div style='width:37px;height:1px;background-color:#8d8a86;margin-top:10px;margin-left:3px;'></div>
+				</div>
+				<div class="success-box">
+					<div class="box">
+						<img src="images/2-1.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+					<div class="box">
+						<img src="images/2-2.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+					<div class="box">
+						<img src="images/2-3.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+					<div class="box">
+						<img src="images/2-4.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+				</div>
+				<div class="success-box">
+					<div class="box">
+						<img src="images/3-1.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+					<div class="box">
+						<img src="images/3-2.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+					<div class="box">
+						<img src="images/3-3.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+					<div class="box">
+						<img src="images/3-4.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+				</div>
+				<div class="success-box">
+					<div class="box">
+						<img src="images/4-1.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+					<div class="box">
+						<img src="images/4-2.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+					<div class="box">
+						<img src="images/4-3.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+					<div class="box">
+						<img src="images/4-4.jpg" alt="">
+						<h2>荣威/ROEWE</h2>
+						<h3>VI设计</h3>
+						<p>上汽股份旗下上海汽车中英文品牌命名</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="news">
+			<div class="content">
+				<div class="news-1">
+					<h2>公司新闻</h2>
+					<div style='width:325px;height:1px;background-color:#dcdcdc;margin-top:10px;margin-bottom:15px;'></div>
+					<ul class="list">
+						<li>美日越对华围攻中方强硬反击 </li>
+						<li>菲没胆量全面对抗中国 </li>
+						<li>解放军实弹演练震惊美军司令 </li>
+						<li>国产航母重型发动机首曝光</li>
+						<li>美日越对华围攻中方强硬反击 </li>
+					</ul>
+				</div>
+				<div class="news-1">
+					<h2>市场活动</h2>
+					<div style='width:325px;height:1px;background-color:#dcdcdc;margin-top:10px;margin-bottom:15px;'></div>
+					<ul class="list">
+						<li>美日越对华围攻中方强硬反击 </li>
+						<li>菲没胆量全面对抗中国 </li>
+						<li>解放军实弹演练震惊美军司令 </li>
+						<li>国产航母重型发动机首曝光</li>
+						<li>美日越对华围攻中方强硬反击 </li>
+					</ul>
+				</div>
+				<div class="news-1">
+					<h2>项目案例</h2>
+					<div style='width:325px;height:1px;background-color:#dcdcdc;margin-top:10px;margin-bottom:15px;'></div>
+					<ul class="list">
+						<li>美日越对华围攻中方强硬反击 </li>
+						<li>菲没胆量全面对抗中国 </li>
+						<li>解放军实弹演练震惊美军司令 </li>
+						<li>国产航母重型发动机首曝光</li>
+						<li>美日越对华围攻中方强硬反击 </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="content">
+				<div class="subNav">
+					<ul>
+						<li>首页</li><img src="images/11.png" alt="">
+						<li>网站地图</li><img src="images/11.png" alt="">
+						<li>关联企业</li><img src="images/11.png" alt="">
+						<li>合作客户</li><img src="images/11.png" alt="">
+						<li>隐私权申明</li><img src="images/11.png" alt="">
+						<li>联系我们</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<div class="we">
+					<div class="we-1">
+						<h6>关于我们</h6>
+						<img src="images/凯晨数字.png" alt="">
+						<p>凯晨数字科技公司前身为北京凯晨传媒</p>
+						<a href="">成立于2004年</a>
+						<div class="clear"></div>
+						<font>
+							是一家以能源、机械、装备制造领域为主导服务的数字多媒体
+							综合供应商，致力于为客户提供项目全程无忧一体化服务。企
+							业以3D动画数字制作技术...
+						</font>
+					</div>
+					<div class="we-2">
+						<h6>职位招聘</h6>
+						<p>招聘销售专员销售管理人员</p>
+						<p>市场销售</p>
+						<p>招聘销售专员销售管理人员</p>
+						<p>营销客服经理</p>
+						<p>涉外律师</p>
+					</div>
+
+					<div class="we-3">
+						<h6>联系我们</h6>
+						<p>地址 Add : 北京朝阳区亚运村阳光广场C2-2301室</p>
+						<p>电话Tel：(86) 010-64924522</p>
+						<p>传真Fax：(86) 010-64924522</p>
+						<p>kaichen2004@163.com</p>
+					</div>
+					<div class="we-4">
+						
+					</div>
+				</div>
+				<div class="we-bottom"></div>
+
+				<div class="copy">
+
+					<p>（备案号）本站版权归北京金凯晨数字科技有限公司所有,未经许可,谢绝一切转载。| 版权所有，抄袭必究 |</p>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
