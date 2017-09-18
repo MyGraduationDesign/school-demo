@@ -1,0 +1,57 @@
+
+60-64    1
+65-69    1.5
+70-74    2
+75-79    2.5
+80-84    3
+85-89    3.5
+90-94    4
+95-100   4.5
+
+输入必修总课数      n
+输入（成绩）  xx  与   （所对应的学分）xx
+int i,j,k;
+float a[110],b[110],max=0;
+for(i=0;i<n;i++)
+{
+	scanf("%f %f",&a[i],&b[i])
+	max=max+b[i];
+
+
+}
+
+#include<stdio.h>
+#include<windows.h>
+int main()
+{
+    int i,j,k,n;
+    float a[110],b[110],c[110],max=0.0,x=0,y;
+    printf("请输入你所通过的必修课总数： ");
+    while(scanf("%d",&n)!=EOF)//输入所通过必修课的总数n
+    {
+        printf("请输入每门课所考的分数与对应的学分！\n");
+        for(i = 0; i < n; i++)
+            printf("第 %d 门课：",i+1);
+            scanf("%lf %lf",&a[i],&b[i]);//每门课所考的分数a[i]与所对应的学分b[i]
+        for(i=0 ;i < n; i++)
+        {
+            max=max+b[i];
+            if(a[i]>=60 && a[i]<=64) c[i]=1;
+            if(a[i]>=65 && a[i]<=69) c[i]=1.5;
+            if(a[i]>=70 && a[i]<=74) c[i]=2;
+            if(a[i]>=75 && a[i]<=79) c[i]=2.5;
+            if(a[i]>=80 && a[i]<=84) c[i]=3;
+            if(a[i]>=85 && a[i]<=89) c[i]=3.5;
+            if(a[i]>=90 && a[i]<=94) c[i]=4;
+            if(a[i]>=95 && a[i]<=100) c[i]=4.5;
+        }
+        for(i = 0;i < n;i++)
+        {
+            x=x+c[i]*b[i];
+        }
+        printf("%lf\n",x/max)                     
+    }
+    system("pause");
+    return 0;    
+}
+ 
